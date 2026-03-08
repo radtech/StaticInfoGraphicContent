@@ -8,10 +8,22 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- 
-        Vibrant Palette Selection: 'Brilliant Cyber' 
-        Colors: Indigo-600, Pink-500, Emerald-500, Amber-500 
+    
+    <!--
+        Plan Summary:
+        1. Hero: Strategic mission for AI integration in Class 6-8.
+        2. Foundation: Class 5 prerequisite mapping.
+        3. Visual Lab Journey: NEW class-wise practical lab breakdown.
+        4. Syllabus Matrix: Grid mapping school subjects to AI concepts.
+        5. Data Analytics: Radar, Bar, and 3D charts showing complexity and synergy.
+        6. Outcomes: Key performance indicators for the curriculum.
+        
+        Technical Standards: 
+        - Palette: Vibrant Cyber (Indigo-600, Pink-500, Emerald-500, Amber-500)
+        - NO SVG or Mermaid JS used.
+        - Charts: Canvas/WebGL rendering.
     -->
+
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #0F172A; }
         .chart-container { position: relative; width: 100%; max-width: 700px; margin: 0 auto; height: 350px; max-height: 400px; }
@@ -19,90 +31,203 @@
         .plotly-container { position: relative; width: 100%; max-width: 900px; margin: 0 auto; height: 500px; }
         .gradient-text { background: linear-gradient(to right, #4F46E5, #EC4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+        .lab-card:hover { transform: translateY(-4px); transition: all 0.3s ease; }
     </style>
 </head>
 <body class="antialiased">
 
-    <header class="bg-white border-b-4 border-emerald-500 p-8 text-center shadow-sm">
+    <header class="bg-white border-b-4 border-indigo-600 p-8 text-center shadow-sm">
         <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight"><span class="gradient-text">NextGen Minds:</span> AI Integration Roadmap</h1>
-        <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">Foundational Research & Data Mapping for Middle School AI Curriculums.</p>
+        <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">Foundational Research & Lab-Centric Framework for Middle School (CBSE/IGCSE) AI Curriculums.</p>
     </header>
 
     <main class="max-w-7xl mx-auto p-4 md:p-8 space-y-12">
+        
         <!-- 1. Foundation Summary -->
         <section class="bg-white rounded-2xl p-6 md:p-10 card-shadow border-t-4 border-amber-500">
-            <h2 class="text-2xl font-bold mb-6 text-slate-800">Class 5 Baseline Assessment</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <h2 class="text-2xl font-bold mb-6 text-slate-800 flex items-center gap-3">
+                <span class="bg-amber-100 p-2 rounded-lg text-amber-600 text-xl">&#128203;</span> 
+                Class 5 Baseline Assessment
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-indigo-600 mb-2">Math Proficiency</h3>
-                    <p class="text-sm text-slate-600">Students enter Class 6 with a firm grasp of patterns, data handling via bar graphs, and basic decimal logic.</p>
+                    <h3 class="font-bold text-indigo-600 mb-2">Math Readiness</h3>
+                    <p class="text-slate-600">Basic patterns, decimals, and pictographs serve as the initial data training grounds.</p>
                 </div>
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-pink-600 mb-2">Science Proficiency</h3>
-                    <p class="text-sm text-slate-600">Understanding of ecosystem cycles and states of matter provides the physical context for data flow.</p>
+                    <h3 class="font-bold text-pink-600 mb-2">Science Readiness</h3>
+                    <p class="text-slate-600">Understanding 'Inputs' (Sunlight/Force) and 'Outputs' (Growth/Motion) mirrors AI sensors.</p>
                 </div>
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
                     <h3 class="font-bold text-emerald-600 mb-2">Cognitive Readiness</h3>
-                    <p class="text-sm text-slate-600">Students can perform multi-step classification tasks, ideal for introducing basic Decision Trees.</p>
+                    <p class="text-slate-600">Students are ready for "Decision Trees" through standard habitat & animal classification logic.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 2. The Data Core -->
+        <!-- 2. CLASS-WISE LAB SECTION -->
+        <section class="bg-slate-900 rounded-2xl p-6 md:p-10 text-white card-shadow">
+            <div class="mb-10 text-center">
+                <h2 class="text-3xl font-extrabold text-emerald-400 mb-2">AI Innovation Lab Framework</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Age-appropriate, hands-on experiments connecting AI to standard science subjects.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Class 6 Lab -->
+                <div class="lab-card bg-slate-800 p-6 rounded-2xl border-b-8 border-pink-500">
+                    <div class="text-4xl mb-4">&#128269;</div>
+                    <h3 class="text-xl font-bold text-pink-400 mb-4">Class 6: Vision & Recognition</h3>
+                    <p class="text-sm text-slate-400 mb-6">Introduction to computer vision through physical-to-digital mapping.</p>
+                    <ul class="space-y-4 text-xs">
+                        <li class="flex items-start gap-2">
+                            <span class="text-pink-500 font-bold">&#10148;</span>
+                            <span><strong>The Botanist AI:</strong> Use webcam-based classification to identify monocot vs dicot leaves (Biology Link).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-pink-500 font-bold">&#10148;</span>
+                            <span><strong>Shadow Classifier:</strong> Map light angles and intensity to machine learning detection thresholds (Physics Link).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Class 7 Lab -->
+                <div class="lab-card bg-slate-800 p-6 rounded-2xl border-b-8 border-amber-500">
+                    <div class="text-4xl mb-4">&#128421;</div>
+                    <h3 class="text-xl font-bold text-amber-400 mb-4">Class 7: Pattern & Prediction</h3>
+                    <p class="text-sm text-slate-400 mb-6">Transitioning from observations to algorithmic "If-Then" logic using block-based AI.</p>
+                    <ul class="space-y-4 text-xs">
+                        <li class="flex items-start gap-2">
+                            <span class="text-amber-500 font-bold">&#10148;</span>
+                            <span><strong>Weather Predictor:</strong> Build a logic block that predicts humidity based on evaporation patterns (Physics Link).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-amber-500 font-bold">&#10148;</span>
+                            <span><strong>Mode Master:</strong> Identify frequency trends in dataset samples to predict "most likely" outcomes (Math Link).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Class 8 Lab -->
+                <div class="lab-card bg-slate-800 p-6 rounded-2xl border-b-8 border-indigo-500">
+                    <div class="text-4xl mb-4">&#128187;</div>
+                    <h3 class="text-xl font-bold text-indigo-400 mb-4">Class 8: Modeling & Weights</h3>
+                    <p class="text-sm text-slate-400 mb-6">Introduction to parameters, model training, and basic Python script interaction.</p>
+                    <ul class="space-y-4 text-xs">
+                        <li class="flex items-start gap-2">
+                            <span class="text-indigo-500 font-bold">&#10148;</span>
+                            <span><strong>Linear Growth Model:</strong> Predict crop yield by adjusting "weights" for water vs sun in a Python script (Bio/Math Link).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-indigo-500 font-bold">&#10148;</span>
+                            <span><strong>Robotic Logic:</strong> Use sensor-input datasets to model simple force-response actuators (Physics Link).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Syllabus Integration Matrix -->
+        <section class="bg-white rounded-2xl p-6 md:p-10 card-shadow border-t-4 border-indigo-600">
+            <h2 class="text-3xl font-extrabold text-slate-800 mb-2">Syllabus Integration Matrix</h2>
+            <p class="text-slate-500 mb-8">Direct mapping of standard school topics to AI core competencies.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Row Mapping for Math -->
+                <div class="p-6 bg-indigo-50 rounded-2xl border border-indigo-100">
+                    <h3 class="font-bold text-indigo-800 mb-4 flex items-center gap-2">
+                        <span class="text-lg">&#128208;</span> Mathematics Integration
+                    </h3>
+                    <ul class="space-y-3 text-xs text-indigo-900">
+                        <li><strong>C6:</strong> Data Handling & Statistics &rarr; Training Data</li>
+                        <li><strong>C7:</strong> Probability & Graphs &rarr; Likelihood Models</li>
+                        <li><strong>C8:</strong> Linear Equations &rarr; Regression Logic</li>
+                    </ul>
+                </div>
+                <!-- Row Mapping for Physics -->
+                <div class="p-6 bg-pink-50 rounded-2xl border border-pink-100">
+                    <h3 class="font-bold text-pink-800 mb-4 flex items-center gap-2">
+                        <span class="text-lg">&#127776;</span> Physics Integration
+                    </h3>
+                    <ul class="space-y-3 text-xs text-pink-900">
+                        <li><strong>C6:</strong> Light & Reflection &rarr; Sensor Inputs</li>
+                        <li><strong>C7:</strong> Motion & Time &rarr; Sequential Logic</li>
+                        <li><strong>C8:</strong> Force & Pressure &rarr; AI Response Systems</li>
+                    </ul>
+                </div>
+                <!-- Row Mapping for Biology -->
+                <div class="p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
+                    <h3 class="font-bold text-emerald-800 mb-4 flex items-center gap-2">
+                        <span class="text-lg">&#129500;</span> Biology Integration
+                    </h3>
+                    <ul class="space-y-3 text-xs text-emerald-900">
+                        <li><strong>C6:</strong> Habitat Taxonomy &rarr; Image Classification</li>
+                        <li><strong>C7:</strong> Animal Nutrition &rarr; Input Optimization</li>
+                        <li><strong>C8:</strong> Cell Structure &rarr; Neural Network Nodes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Data Visualizations -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="bg-white rounded-2xl p-6 md:p-8 card-shadow">
-                <h2 class="text-2xl font-bold mb-2">Synergy Radar</h2>
-                <p class="text-xs text-slate-500 mb-4">Mapping overlap between core competencies and AI requirements.</p>
+                <h2 class="text-2xl font-bold mb-4">Subject Synergy Radar</h2>
                 <div class="chart-container"><canvas id="radarChart"></canvas></div>
             </div>
             <div class="bg-white rounded-2xl p-6 md:p-8 card-shadow">
-                <h2 class="text-2xl font-bold mb-2">Academic Integration Hours</h2>
-                <p class="text-xs text-slate-500 mb-4">Projected hours per year for integrated AI-Science modules.</p>
+                <h2 class="text-2xl font-bold mb-4">Dedicated Lab vs Theory Hours</h2>
                 <div class="chart-container"><canvas id="stackedBarChart"></canvas></div>
             </div>
         </section>
 
-        <!-- 3. Visual Strategy Map -->
+        <!-- 5. 3D Roadmap -->
         <section class="bg-white rounded-2xl p-6 md:p-10 card-shadow">
-            <h2 class="text-2xl font-bold mb-4 text-slate-800">Topic Complexity Matrix</h2>
-            <p class="text-sm text-slate-500 mb-6">X: Grade | Y: Subject Stream | Z: Technical Difficulty Level</p>
+            <h2 class="text-2xl font-bold mb-4">Topic Complexity Matrix</h2>
             <div class="plotly-container" id="plotly3d"></div>
         </section>
 
-        <!-- 4. Outcome Dashboard -->
-        <section class="bg-indigo-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-3xl font-extrabold mb-8 text-amber-400">Target Curricular Outcomes</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm">
-                        <div class="text-4xl font-bold mb-1">80%</div>
-                        <p class="text-xs text-indigo-200 uppercase tracking-widest font-bold">Lab Engagement</p>
-                    </div>
-                    <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm">
-                        <div class="text-4xl font-bold mb-1">3.0</div>
-                        <p class="text-xs text-indigo-200 uppercase tracking-widest font-bold">Projects / Year</p>
-                    </div>
-                    <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm">
-                        <div class="text-4xl font-bold mb-1">Python</div>
-                        <p class="text-xs text-indigo-200 uppercase tracking-widest font-bold">Base Syntax</p>
-                    </div>
-                    <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm">
-                        <div class="text-4xl font-bold mb-1">Logic</div>
-                        <p class="text-xs text-indigo-200 uppercase tracking-widest font-bold">First Principles</p>
-                    </div>
+        <!-- 6. Key Performance Metrics -->
+        <section class="bg-gradient-to-r from-indigo-700 to-indigo-900 rounded-3xl p-8 text-white">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-black text-emerald-400 mb-1">80%</div>
+                    <p class="text-[10px] tracking-widest font-bold uppercase">Lab-Led Learning</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-black text-amber-400 mb-1">3+</div>
+                    <p class="text-[10px] tracking-widest font-bold uppercase">Annual AI Projects</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-black text-pink-400 mb-1">Python</div>
+                    <p class="text-[10px] tracking-widest font-bold uppercase">Script Proficiency</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-black text-indigo-200 mb-1">Ethics</div>
+                    <p class="text-[10px] tracking-widest font-bold uppercase">Data Responsibility</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-slate-800 text-slate-500 p-10 text-center text-xs border-t border-slate-700">
-        <p>CONFIDENTIAL STRATEGY DOCUMENT • NEXTGEN MINDS STARTUP FRAMEWORK</p>
+    <footer class="bg-slate-800 text-slate-500 p-10 text-center text-xs border-t border-slate-700 tracking-widest uppercase">
+        <p>© 2024 NextGen Minds Startup Framework • Proprietary Strategic Framework</p>
     </footer>
 
     <script>
-        // Data Visualizations for the Static Version
+        // Chart Processing
         function wrapLabel(str){ return str.length > 16 ? [str.slice(0,16), str.slice(16)] : str; }
-        const tooltipOptions = { plugins: { tooltip: { callbacks: { title: (items) => { let l = items[0].chart.data.labels[items[0].dataIndex]; return Array.isArray(l) ? l.join('') : l; } } } } };
+        const tooltipConfig = { 
+            plugins: { 
+                tooltip: { 
+                    callbacks: { 
+                        title: (items) => { 
+                            let l = items[0].chart.data.labels[items[0].dataIndex]; 
+                            return Array.isArray(l) ? l.join(' ') : l; 
+                        } 
+                    } 
+                } 
+            } 
+        };
 
         // Radar Chart
         new Chart(document.getElementById('radarChart'), {
@@ -110,20 +235,14 @@
             data: {
                 labels: ["Stat Analysis", "Linear Logic", "Optics/Sensors", "Human Systems", "Taxonomy", "Number Theory"].map(wrapLabel),
                 datasets: [{ 
-                    label: 'Standard CBSE Focus', 
-                    data: [70, 60, 90, 85, 95, 80], 
-                    backgroundColor: 'rgba(236, 72, 153, 0.2)', 
-                    borderColor: '#EC4899',
-                    pointBackgroundColor: '#EC4899'
+                    label: 'Standard CBSE Focus', data: [70, 60, 90, 85, 95, 80], 
+                    backgroundColor: 'rgba(236, 72, 153, 0.2)', borderColor: '#EC4899'
                 }, { 
-                    label: 'Startup AI Focus', 
-                    data: [95, 90, 80, 50, 40, 85], 
-                    backgroundColor: 'rgba(79, 70, 229, 0.2)', 
-                    borderColor: '#4F46E5',
-                    pointBackgroundColor: '#4F46E5'
+                    label: 'NextGen AI Focus', data: [95, 90, 80, 50, 40, 85], 
+                    backgroundColor: 'rgba(79, 70, 229, 0.2)', borderColor: '#4F46E5'
                 }]
             },
-            options: { maintainAspectRatio: false, ...tooltipOptions }
+            options: { maintainAspectRatio: false, ...tooltipConfig }
         });
 
         // Bar Chart
@@ -132,21 +251,21 @@
             data: { 
                 labels: ["Class 6", "Class 7", "Class 8"], 
                 datasets: [
-                    { label: 'AI via Math', data: [15, 25, 35], backgroundColor: '#4F46E5' }, 
-                    { label: 'AI via Science', data: [30, 35, 40], backgroundColor: '#EC4899' }
+                    { label: 'Lab Experiment Hours', data: [40, 50, 60], backgroundColor: '#10B981' }, 
+                    { label: 'Theory & Mapping Hours', data: [20, 20, 15], backgroundColor: '#4F46E5' }
                 ] 
             },
             options: { 
                 maintainAspectRatio: false, 
-                scales: { x: { stacked: true }, y: { stacked: true, title: { display: true, text: 'Integrated Hours' } } }, 
-                ...tooltipOptions 
+                scales: { x: { stacked: true }, y: { stacked: true, title: {display: true, text: 'Hours per Academic Year'} } }, 
+                ...tooltipConfig 
             }
         });
 
         // 3D Matrix
         const matrixData = [
-            { x: [6, 7, 8], y: [1, 2, 3], z: [3, 6, 9], name: 'Math Path', mode: 'markers', marker: { color: '#4F46E5', size: 10 }, type: 'scatter3d' },
-            { x: [6, 7, 8], y: [2, 1, 4], z: [2, 5, 8], name: 'Science Path', mode: 'markers', marker: { color: '#EC4899', size: 10 }, type: 'scatter3d' }
+            { x: [6, 7, 8], y: [1, 2, 3], z: [3, 6, 9], name: 'Mathematics Path', mode: 'markers', marker: { color: '#4F46E5', size: 12 }, type: 'scatter3d' },
+            { x: [6, 7, 8], y: [2, 1, 4], z: [2, 5, 8], name: 'Sciences Path', mode: 'markers', marker: { color: '#EC4899', size: 12 }, type: 'scatter3d' }
         ];
         Plotly.newPlot('plotly3d', matrixData, { 
             margin: {l:0,r:0,b:0,t:0}, 
